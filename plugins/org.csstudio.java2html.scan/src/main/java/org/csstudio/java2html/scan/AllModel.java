@@ -1,5 +1,8 @@
 package org.csstudio.java2html.scan;
 
+import java.util.List;
+
+import net.java.html.json.ComputedProperty;
 import net.java.html.json.Model;
 import net.java.html.json.Property;
 
@@ -18,6 +21,11 @@ public class AllModel {
         ui.getSomeArray().add(new SomeArrayData(1,"test"));
         ui.applyBindings();
        
+    }
+    
+    @ComputedProperty
+    public static int computedProp(List<SomeArrayData> someArray){
+    	return 5;
     }
     
     @Model(className = "SomeArrayData", properties = {

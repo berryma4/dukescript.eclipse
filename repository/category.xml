@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="org.csstudio.java2html.scan.feature">
+      <category name="org.csstudio.frib.applications"/>
+   </feature>
+   <category-def name="org.csstudio.frib.applications" label="FRIB Applications"/>
+</site>

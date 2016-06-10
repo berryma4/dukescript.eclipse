@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1464026992324
+Build-Jdk: 1.8.0_91
+Built-By: berryman
+Bundle-Description: html scan
+Bundle-License: https://opensource.org/licenses/MIT
+Bundle-ManifestVersion: 2
+Bundle-Name: html scan
+Bundle-SymbolicName: org.csstudio.java2html.scan
+Bundle-Version: 1.0.0.qualifier
+Eclipse-RegisterBuddy: org.csstudio.java2html.eclipse
+Require-Bundle: org.csstudio.java2html.eclipse;bundle-version="1.0.0"
+

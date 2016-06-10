@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.csstudio.java2html.eclipse.HTMLJE3Editor"
+            default="true"
+            extensions="html"
+            icon="icons/htmlj.png"
+            id="org.csstudio.java2html.eclipse.E3Editor"
+            name="csd scan">
+            <parameter name="bundle" value="org.csstudio.java2html.scan"/>
+            <parameter name="className" value="org.csstudio.java2html.scan.ChartModel"/>
+            <parameter name="mainMethod" value="onPageLoad"/>
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            class="org.csstudio.java2html.eclipse.HtmlComponent"
+            id="org.csstudio.java2html.eclipse.view1"
+            name="CSD Scan"
+            restorable="true">
+            <parameter name="bundle" value="org.csstudio.java2html.scan"/>
+            <parameter name="html" value="pages/index.html"/>
+            <parameter name="className" value="org.csstudio.java2html.scan.ChartModel"/>
+            <parameter name="mainMethod" value="onPageLoad"/>
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.contexts">
+      <context
+            id="org.csstudio.java2html.eclipse.context"
+            name="HTMLJ Context"
+            parentId="org.eclipse.ui.contexts.window">
+      </context>
+    </extension>
+</plugin>

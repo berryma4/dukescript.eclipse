@@ -11,7 +11,17 @@
 	<artifactId>org.csstudio.java2html.scan</artifactId>
 	<packaging>eclipse-plugin</packaging>
 	<build>
-		<plugins>
+	   <plugins>
+               <plugin>
+                    <groupId>org.eclipse.tycho</groupId>
+                    <artifactId>tycho-compiler-plugin</artifactId>
+                    <version>${tycho.version}</version>
+	            <configuration>
+	              <proc>none</proc>
+                      <!-- This is to avoid errors when using restricted API from org.ecpics.vtype, and sun.* -->
+                      <compilerArgument>-err:-forbidden</compilerArgument>
+                    </configuration>
+               </plugin>
                     <plugin>
 			<groupId>org.bsc.maven</groupId>
 			<artifactId>maven-processor-plugin</artifactId>

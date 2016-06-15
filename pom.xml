@@ -158,10 +158,6 @@
         <artifactId>tycho-compiler-plugin</artifactId>
         <version>${tycho.version}</version>
 	<configuration>
-	  <proc>none</proc>
-          <includes>
-		  <include>${project.build.directory}/target/generated-sources/annotations</include>
-	  </includes>
           <!-- This is to avoid errors when using restricted API from org.ecpics.vtype, and sun.* -->
           <compilerArgument>-err:-forbidden</compilerArgument>
         </configuration>
